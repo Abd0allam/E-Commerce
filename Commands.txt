@@ -1,0 +1,35 @@
+git init
+git add .
+git commit -m "e-commerce"
+git log
+git remote add origin git@github.com:Abd0allam/E-Commerce.git
+git push -u origin master
+git branch dev
+git branch test
+git checkout dev
+touch dev.html
+git add .
+git commit -m "dev"
+git push --set-upstream origin dev
+git push -u origin master
+git push -u origin dev
+git checkout test
+touch test.html
+git add .
+git commit -m "test"
+git push -u origin test
+git checkout master
+git merge dev
+git merge test
+git push origin master
+git branch -d dev
+git push origin --delete test
+git stash
+git checkout master
+git stash apply
+git tag -a v1.7 -m "Version 1.7"
+git push --tags
+git push origin v1.7
+git tag
+git tag -d v1.7
+git push --delete E-Commerce v1.7
