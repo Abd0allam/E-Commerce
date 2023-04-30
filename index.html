@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>E commerce</title>
+    <title>E commerce | A-Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
                     <img src="images/logo.png" width="125px">
                 </div>
                 <nav>
-                    <ul>
+                    <ul id="menu-items">
                         <li><a href="">Home</a></li>
                         <li><a href="">Products</a></li>
                         <li><a href="">About</a></li>
@@ -29,6 +29,7 @@
                     </ul>
                 </nav>
                 <img src="images/cart.png" width="30px" height="30px" id="cart" alt="cart image">
+                <img src="images/menu.png" class="menu" >
             </div>
             <div class="row">
                 <div class="col-2">
@@ -307,6 +308,68 @@
     </div>
     <!-- ---------end brands--------- -->
     <!-- ----------------start footer--------------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download For Android and IOS</p>
+                    <div class="app-logo">
+                        <img src="/images/play-store.png" >
+                        <img src="/images/app-store.png" >
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="/images/logo-white.png" alt="">
+                    <p>Our purpose is to make you fell satisfied and fell comfortable with any kind of sports</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog posts</li>
+                        <li>Policy</li>
+                        <li>About us</li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="cp">&copy;Copyright-2023-A-Store</p>
+    </div>
     <!-- ----------------end footer--------------- -->
+    <script>
+        var menue = document.getElementsByClassName("menu");
+        var items = document.getElementById("menu-items");
+        var clicked = false;
+        for (var i = 0; i < menue.length; i++) {
+            menue[i].addEventListener("click", toggle);
+        }
+        function toggle() {
+            console.log("hi");
+            clicked = !clicked;
+            if (clicked) {
+                items.style.display = "block";
+                items.style.position="absolute";
+                items.style.width="110px";
+                items.style.height="190px";
+                items.style.backgroundColor="#333";
+                items.style.top="70px";
+                items.style.bottom="0";
+                items.style.left="67%";
+            }else{
+                items.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

@@ -2,10 +2,6 @@
 :root {
     --main-color: #555;
     --secondary-color: #ff523b;
-    /* 
-    --section-padding: 60px;
-    --section-background: #f6f6f6;
-    --main-duration: 0.5s; */
 }
 /* End Variables */
 .container {
@@ -20,19 +16,20 @@
     .container {
       width: 750px;
     }
-  }
-  /* Medium */
-  @media (min-width: 992px) {
+}
+/* Medium */
+@media (min-width: 992px) {
     .container {
       width: 970px;
     }
-  }
-  /* Large */
-  @media (min-width: 1200px) {
+}
+/* Large */
+@media (min-width: 1200px) {
     .container {
       width: 1170px;
     }
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -50,7 +47,7 @@ nav{
     text-align: right;
 }
 nav ul{
-    display: inline-block;
+    /* display: inline-block; */
     list-style-type: none;
 }
 nav ul li{
@@ -61,10 +58,38 @@ nav ul li a{
     text-decoration: none;
     color: var(--main-color);
 }
-/* End Nav */
 .header{
     background-color: #ffdede7d;
 }
+.menu{
+    width: 30px;
+    margin-left: 20px;   
+    display: none;
+}
+@media only screen and (max-width:668px){
+    nav ul{
+        display: none;
+    }
+    nav ul li {
+        margin-right: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.3s;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+    nav ul li:hover{
+        transform: translateX(7px);
+    }
+}
+/* End Nav */
+
 /* start row */
 .row{
     display: flex;
@@ -237,3 +262,53 @@ small{
     filter: grayscale(0);
 }
 /* end brands */
+
+/* start footer */
+.footer{
+    background-color: #000;
+    color: #8a8a8a;
+    font-size: 1rem;
+    padding: 60px 0 20px;   
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1,.footer-col-3,.footer-col-2,.footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3,.footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+.footer ul{
+    list-style-type: none;
+}
+.footer hr{
+    border: none;
+    background-color: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.cp{
+    text-align: center;
+}
+/* end footer */
